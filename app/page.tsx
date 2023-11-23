@@ -10,7 +10,9 @@ export default async function Home() {
   return (
     <section className="container p-3 pt-10 mx-auto">
       <div className="space-y-5">
-        <TypographyH1 className="text-center">Welcome to asmal</TypographyH1>
+        <div className="mx-auto w-fit typewriter">
+          <TypographyH1 className="text-center">Welcome to asmal</TypographyH1>
+        </div>
         <div className="max-w-2xl mx-auto">
           <TypographyH2 className="relative text-center">
             <div className="text-emerald-400">

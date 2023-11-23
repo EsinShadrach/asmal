@@ -122,3 +122,33 @@
   }
 }
 
+@layer utilities {
+  .typewriter h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right-width: 2px;
+    animation: typing 3s steps(40), blink-caret 0.75s step-end infinite;
+  }
+
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Blinking caret animation */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+}
+
