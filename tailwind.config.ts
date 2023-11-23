@@ -67,10 +67,18 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        sparkleAnimation: {
+          "0%": { opacity: "1", transform: "rotate(0deg) scale(0)" },
+          "100%": { opacity: "0", transform: "rotate(360deg) scale(1.5)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "sparkle-1": "sparkleAnimation 1.5s ease-in-out infinite",
+        "sparkle-2": "sparkleAnimation 2.5s ease-in-out infinite",
+        "sparkle-3": "sparkleAnimation 3.5s ease-in-out infinite",
+        "sparkle-4": "sparkleAnimation 4.5s ease-in-out infinite",
       },
     },
   },

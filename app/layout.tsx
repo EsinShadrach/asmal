@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Navbar from "~/components/navbar/navbar";
 import { cn } from "~/lib/utils";
 import "./globals.css";
 
@@ -23,7 +24,10 @@ export default function RootLayout({
         <div className="main">
           <div className="gradient" />
         </div>
-        <main className="relative z-10 app">{children}</main>
+        <main className="relative z-10 app">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
