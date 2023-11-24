@@ -9,7 +9,7 @@ import {
 
 export function HeroSection() {
   return (
-    <section className="pt-10 mx-auto">
+    <section className="pt-10 mx-auto space-y-10">
       <div className="space-y-5">
         <div className="mx-auto w-fit typewriter">
           <TypographyH1 className="text-center">Welcome to asmal</TypographyH1>
