@@ -90,7 +90,7 @@ export default function Samples() {
               <Image
                 alt={sample.source}
                 src={sample.image}
-                className="mx-auto"
+                className="mx-auto rounded-md"
               />
             </Link>
           </SwiperSlide>
