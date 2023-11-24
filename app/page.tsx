@@ -1,4 +1,3 @@
-import { FileIcon } from "lucide-react";
 import { GlowingCard } from "~/utils/cards/tilting-card";
 import { TypographyH2 } from "~/utils/typography/typography";
 import { HeroSection } from "./HeroSection";
@@ -6,6 +5,7 @@ import Samples from "./Samples";
 import htmlLogo from "~/public/html.png";
 import cssLogo from "~/public/css.png";
 import jsLogo from "~/public/js.png";
+import Link from "next/link";
 
 const featuredCourses = [
   {
@@ -30,7 +30,7 @@ const featuredCourses = [
     description:
       "Start your journey into JavaScript and build interactive web applications.",
     imageUrl: jsLogo,
-    categories: ["JavaScript"],
+    categories: ["JavaScript", "intermedate"],
   },
 ];
 
@@ -44,7 +44,9 @@ export default async function Home() {
         <TypographyH2 className="w-fit">Featured Courses..?</TypographyH2>
         <div className="grid lg:grid-cols-3 gap-3 md:grid-cols-2">
           {featuredCourses.map((courses, index) => (
-            <GlowingCard {...courses} key={index} />
+            <Link href={`/courses/${courses.id}`} key={index}>
+              <GlowingCard {...courses} />
+            </Link>
           ))}
         </div>
       </section>

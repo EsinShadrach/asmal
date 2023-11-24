@@ -1,19 +1,16 @@
 "use client";
-import { Link } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import { Badge } from "~/components/ui/badge";
 import { TypographyH4 } from "../typography/typography";
 
 interface GlowingCardProps {
-  id: string;
   title: string;
   description: string;
   imageUrl: string | StaticImageData;
   categories: string[];
 }
 export function GlowingCard({
-  id,
   description,
   title,
   imageUrl,
@@ -54,36 +51,34 @@ export function GlowingCard({
         transition: "perspective 0.3s ease-out",
       }}
     >
-      <Link href={`/courses/${id}`}>
-        <div
-          className="relative flex flex-col justify-between w-full h-full p-6 mx-auto overflow-hidden bg-pink-100 border border-pink-200 rounded-xl"
-          style={{
-            transform: isHovered
-              ? `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`
-              : "rotateX(0deg) rotateY(0deg)",
-            transition: "transform 0.3s ease-out",
-          }}
-        >
-          <div className="flex items-center gap-3">
-            <Image
-              alt={`${title}image`}
-              src={imageUrl}
-              width={32}
-              height={32}
-              className="object-cover"
-            />
-            <TypographyH4>{title}</TypographyH4>
-          </div>
-          <p>{description}</p>
-          <div className="space-x-3">
-            {categories.map((category, index) => (
-              <Badge key={index} variant="secondary">
-                {category}
-              </Badge>
-            ))}
-          </div>
+      <div
+        className="relative flex flex-col justify-between w-full h-full p-6 mx-auto overflow-hidden bg-pink-100 border border-pink-200 rounded-xl"
+        style={{
+          transform: isHovered
+            ? `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`
+            : "rotateX(0deg) rotateY(0deg)",
+          transition: "transform 0.3s ease-out",
+        }}
+      >
+        <div className="flex items-center gap-3">
+          <Image
+            alt={`${title}image`}
+            src={imageUrl}
+            width={32}
+            height={32}
+            className="object-cover"
+          />
+          <TypographyH4>{title}</TypographyH4>
         </div>
-      </Link>
+        <p>{description}</p>
+        <div className="space-x-3">
+          {categories.map((category, index) => (
+            <Badge key={index} variant="secondary">
+              {category}
+            </Badge>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
