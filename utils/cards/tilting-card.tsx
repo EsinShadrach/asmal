@@ -42,7 +42,7 @@ export function GlowingCard({
 
   return (
     <div
-      className="w-full h-56 max-w-md"
+      className="w-full h-56 max-w-md mx-auto"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
