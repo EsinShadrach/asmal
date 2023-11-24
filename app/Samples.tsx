@@ -75,7 +75,7 @@ export default function Samples() {
         }}
         autoplay={{
           delay: 2500,
-          dissableOnInteraction: false,
+          disableOnInteraction: false,
         }}
         modules={[EffectCoverflow, Autoplay]}
         className="mySwiper"
