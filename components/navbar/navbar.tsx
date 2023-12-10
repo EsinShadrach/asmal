@@ -1,4 +1,6 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "~/public/logo.png";
 import { TypographyH3 } from "~/utils/typography/typography";
 import { Button } from "../ui/button";
@@ -15,7 +17,10 @@ export default function Navbar() {
         </div>
         <div></div>
         <div>
-          <Button>Login</Button>
+          <Button asChild>
+            <Link href={"/sign-up"}>Login</Link>
+          </Button>
+          <UserButton />
         </div>
       </nav>
     </header>

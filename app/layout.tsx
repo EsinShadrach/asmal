@@ -1,6 +1,6 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "~/components/navbar/navbar";
 import { cn } from "~/lib/utils";
 import "./globals.css";
 
@@ -21,13 +21,12 @@ export default function RootLayout({
       <body
         className={cn(inter.className, "text-slate-900 bg-pink-50 lowercase")}
       >
-        <div className="main">
-          <div className="gradient" />
-        </div>
-        <main className="relative z-10 app">
-          <Navbar />
-          {children}
-        </main>
+        <ClerkProvider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="relative z-10 app">{children}</main>
+        </ClerkProvider>
       </body>
     </html>
   );

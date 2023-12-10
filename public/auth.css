@@ -1,0 +1,63 @@
+.cl-internal-b3fm6y {
+  @apply hidden;
+}
+
+.cl-footer {
+  @apply flex justify-center;
+}
+
+.cl-formButtonPrimary {
+  @apply bg-[#db2777] hover:bg-[#db2777]/90;
+}
+
+.cl-card {
+  @apply w-full p-0 m-0 bg-transparent rounded-none shadow-none;
+}
+
+.cl-footerActionLink {
+  color: inherit;
+}
+
+.cl-formFieldInput {
+  all: unset;
+  border: 1px solid;
+  @apply p-2 border-gray-200 rounded-md transition-all duration-300 text-slate-900;
+}
+
+.cl-formFieldInput:focus {
+  outline: transparent;
+  @apply outline-none border border-[#db2777] shadow-none;
+}
+
+.cl-formFieldLabel {
+  all: unset;
+  @apply font-normal text-slate-500;
+}
+
+.cl-rootBox {
+  @apply w-full max-w-xl p-2;
+}
+
+.cl-logoBox {
+  @apply hidden;
+}
+
+.cl-header {
+  @apply hidden;
+}
+
+.cl-identityPreviewEditButton {
+  color: inherit;
+}
+
+.cl-formResendCodeLink {
+  color: inherit;
+}
+
+.cl-otpCodeFieldInput:focus {
+  @apply border-[#db2777];
+}
+
+.cl-formFieldInput__phoneNumber {
+  @apply w-full rounded-l-none;
+}

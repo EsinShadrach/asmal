@@ -1,11 +1,12 @@
+import Link from "next/link";
+import Navbar from "~/components/navbar/navbar";
+import cssLogo from "~/public/css.png";
+import htmlLogo from "~/public/html.png";
+import jsLogo from "~/public/js.png";
 import { GlowingCard } from "~/utils/cards/tilting-card";
 import { TypographyH2 } from "~/utils/typography/typography";
 import { HeroSection } from "./HeroSection";
 import Samples from "./Samples";
-import htmlLogo from "~/public/html.png";
-import cssLogo from "~/public/css.png";
-import jsLogo from "~/public/js.png";
-import Link from "next/link";
 
 const featuredCourses = [
   {
@@ -37,19 +38,22 @@ const featuredCourses = [
 export default async function Home() {
   // await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
-    <div className="container p-3 mx-auto space-y-10">
-      <HeroSection />
-      <Samples />
-      <section className="space-y-3">
-        <TypographyH2 className="w-fit">Featured Courses..?</TypographyH2>
-        <div className="grid lg:grid-cols-3 gap-3 md:grid-cols-2">
-          {featuredCourses.map((courses, index) => (
-            <Link href={`/courses/${courses.id}`} key={index}>
-              <GlowingCard {...courses} />
-            </Link>
-          ))}
-        </div>
-      </section>
-    </div>
+    <>
+      <Navbar />
+      <div className="container p-3 mx-auto space-y-10">
+        <HeroSection />
+        <Samples />
+        <section className="space-y-3">
+          <TypographyH2 className="w-fit">Featured Courses..?</TypographyH2>
+          <div className="grid lg:grid-cols-3 gap-3 md:grid-cols-2">
+            {featuredCourses.map((courses, index) => (
+              <Link href={`/courses/${courses.id}`} key={index}>
+                <GlowingCard {...courses} />
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
